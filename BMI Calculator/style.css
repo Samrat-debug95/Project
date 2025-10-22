@@ -1,0 +1,80 @@
+/* Basic page setup */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5; /* Light gray background to see the card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height of the screen */
+  margin: 0;
+}
+
+/* The Card */
+.calculator-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Set a max-width for the card */
+  box-sizing: border-box;
+}
+
+/* Heading */
+.calculator-card h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Input paragraphs */
+.calculator-card form p {
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+.calculator-card label {
+  display: block; /* Makes label appear on its own line */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input fields */
+.calculator-card input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Important for padding to work correctly */
+  font-size: 1rem;
+}
+
+/* Button */
+.calculator-card button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff; /* A nice blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.calculator-card button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Result div */
+.calculator-card .result {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  color: #333;
+}
