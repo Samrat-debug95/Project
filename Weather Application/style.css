@@ -1,0 +1,159 @@
+
+/* --- Global Styles & Body --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* This centers the card on the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a; /* Dark background from the image */
+}
+
+/* --- Main Weather Card --- */
+.container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 500px; /* Set a max-width for the card */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 1. Weather Header (Search) --- */
+.weather_header form {
+  display: flex;
+  align-items: center;
+  /* Adds the faint line under the search bar */
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 15px;
+}
+
+.weather_header .fa-magnifying-glass {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-right: 12px;
+  /* Prevents the icon from shrinking */
+  flex-shrink: 0;
+}
+
+.weather_header .city_name {
+  /* Removes default input styling */
+  border: none;
+  outline: none;
+  /* Makes the input fill the available space */
+  flex-grow: 1;
+  font-size: 1.1rem;
+  padding: 5px;
+  width: 100%; /* Ensures it fills the form */
+}
+
+.weather_header .city_name::placeholder {
+  color: #aaaaaa;
+  font-weight: 300;
+}
+
+/* --- 2. Weather Body (Main Info) --- */
+.weather_body {
+  /* Center-aligns all the text and icon */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.weather-city {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.weather-date-time {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-top: 5px;
+}
+
+.weather-forcast {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.weather_icon {
+  margin: 20px 0;
+}
+
+/* Style the image that will be added by JavaScript */
+.weather_icon img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  /* This creates the orange circle effect seen in the image */
+  background: #ffae50;
+  border-radius: 50%;
+}
+
+.weather_temp {
+  font-size: 3.5rem; /* Very large temperature */
+  font-weight: 400;
+  color: #333333;
+  line-height: 1; /* Tightens up the spacing */
+}
+
+.weather_minmax {
+  display: flex;
+  gap: 15px; /* Adds space between min and max */
+  margin-top: 10px;
+  color: #555555;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* --- 3. Weather Info (Bottom Cards) --- */
+.weather_info {
+  display: grid;
+  /* Creates the 2x2 grid */
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+  /* Adds the separator line above this section */
+  border-top: 1px solid #eeeeee;
+  padding-top: 25px;
+}
+
+.weather_card {
+  display: flex;
+  align-items: center;
+  /* Light gray background for each card */
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.weather_card i {
+  font-size: 1.8rem;
+  color: #444444;
+  margin-right: 12px;
+}
+
+/* Styles the text title ("Feels Like", "Humidity", etc.) */
+.weather_card div p:first-child {
+  font-size: 0.85rem;
+  color: #888888;
+  margin-bottom: 2px;
+}
+
+/* Styles the value ("297°", "42%", etc.) */
+.weather_card div p:last-child {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333333;
+}
